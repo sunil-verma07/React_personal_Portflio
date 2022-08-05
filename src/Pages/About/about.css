@@ -1,0 +1,134 @@
+.about-wrapper {
+    margin-top:0rem;
+    height:max-content;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.side{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.responsive-content{
+    display:none !important;
+}
+.side .bottom-layer{
+    width: 250px;
+    height: 260px;
+    background-color: var(--container-color);    
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.45s ease-in-out;
+    position: relative;
+    
+}
+.side .bottom-layer img{
+    width: 250px;
+    height: 260px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    transition: all 0.45s ease-in-out;
+}
+.side .bottom-layer .my-content{
+    position: absolute;
+    width: 400px;
+    right: 10px;
+    top: 40px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.45s ease-in-out; 
+}
+.side .bottom-layer:hover img{
+    transform: translateY(-26px) scale(1.2);
+    border-radius:1px;
+}
+.side .bottom-layer:hover{
+     width: 700px;
+     border-radius:20px;
+}
+.side .bottom-layer:hover .my-content{
+   opacity: 1;
+    
+}
+.content-container{
+    width: 100%;
+    text-align: justify;
+    transition: all 0.3s;
+}
+.content-container p{
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+}
+
+.content-container p:first-child::first-letter{
+    color:var(--first-color-alt);
+    font-weight: bold;
+    font-size: 70px;
+    float: left;
+    line-height: 60px;
+    padding-right: 8px;
+    margin-top: -3px;
+}
+
+@media (max-width:850px){
+    .responsive-content{
+        display:block !important;
+        margin-top:1rem;
+        padding: 1rem;
+        color:#ffffff;
+    }
+    
+    .side .bottom-layer{
+        width: 200px;
+        height: 210px;
+        background-color: #a480f2;
+        border-radius: 50%;
+
+    }
+    .side .bottom-layer img{
+        width: 200px;
+        height: 210px;
+        border-radius: 50%;
+    }
+    .side .bottom-layer .my-content{
+        display:none;
+    }
+    .side .bottom-layer:hover img{
+        width: 200px;
+        height: 210px;
+        transform: none;
+        border-radius: 50%;
+    }
+    .side .bottom-layer:hover{
+        width: 200px;
+        height: 210px;
+        background-color: #a480f2;
+        border-radius: 50%;   
+    }
+    .responsive-content{
+        width: 100%;
+        text-align: justify;
+        transition: all 0.3s;
+    }
+    .responsive-content p{
+        line-height: 1.5;
+        letter-spacing: 0.3px;
+        word-spacing: 2px;
+    }
+    
+    .responsive-content p:first-child::first-letter{
+        color:#660099;
+        font-weight: bold;
+        font-size: 70px;
+        float: left;
+        line-height: 60px;
+        padding-right: 8px;
+        margin-top: -3px;
+    }
+   
+}

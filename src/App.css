@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+:root {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    --first-hue: 250;
+    --sat: 66%;
+    --lig: 75%;
+    --second-hue: 219;
+    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+    --title-color: hsl(var(--second-hue), 15%, 95%);
+    --text-color: hsl(var(--second-hue), 8%, 75%);
+    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --body-color: hsl(var(--second-hue), 48%, 8%);
+    --container-color: hsl(var(--second-hue), 32%, 12%);
+
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  
+body{
+    background:var(--body-color);
+    font-family: 'Raleway', sans-serif;
+    background-image: url('../src/assets/az-subtle.png');
+  
+}
+.container{
+    padding:2rem;
+    min-height: 100vh;
+    width:70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    padding: 15px 40px;
+    background: var(--first-color);
+    border:0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+    transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    display: block;
+    margin: auto;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  button::after,
+  button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+      opacity: 0;
+    transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
-  to {
-    transform: rotate(360deg);
+  
+  button::after{
+      width: 30px;
+      height: 1px;
+      background: white;
+      transform: translateX(-3px);
+      margin-top: 0px;
   }
-}
+  
+  button::before{
+      content: "";
+      transform: rotate(-135deg) translateX(50%);
+      width: 11px;
+      height: 11px;
+      background: transparent;
+      border-left: 1px solid white;
+      border-bottom: 1px solid white;
+    margin-top: -1px;
+  }
+  
+  
+  button:hover{
+    padding: 15px 60px 15px 20px;
+  }
+  
+  button:hover::after,
+  button:hover::before{
+    opacity: 1;
+    right: 15px;
+  }

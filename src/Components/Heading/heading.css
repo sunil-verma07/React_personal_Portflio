@@ -1,0 +1,19 @@
+.heading{
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   margin: 0 0 2rem 0;
+}
+.heading p{
+    color: var(--text-color);
+    text-transform:capitalize;
+    font-size:1.2rem;
+    margin-bottom: .5rem;
+}
+.heading h1{
+    color: var(--first-color);
+    text-transform:capitalize;
+}

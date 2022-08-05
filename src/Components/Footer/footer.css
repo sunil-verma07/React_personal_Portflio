@@ -1,0 +1,35 @@
+.footer{
+    width:100%;
+    background-color:var(--first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0 7rem 0;
+    
+}
+.footer .footer-links{
+    display: flex;
+    flex-direction: row;
+}
+.footer .footer-links a{
+    text-decoration: none;
+    text-transform:uppercase;
+    margin: 2rem 1.4rem;
+    color: var(--body-color);
+}
+.footer .my-name {
+    font-family: 'Satisfy', cursive;
+    font-size:3rem;
+    margin-bottom: 1rem;
+    color: var(--body-color);
+}
+.footer .footer-icons span {
+    font-size:2rem;
+    cursor:pointer;
+    margin: 2rem .5rem;
+    color: var(--body-color);
+}
+.footer p{
+    margin-top:2rem;
+}
